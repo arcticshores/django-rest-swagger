@@ -1,4 +1,4 @@
-VERSION = '0.3.10'
+VERSION = '0.3.10-django-11.1-hotfix'
 
 DEFAULT_SWAGGER_SETTINGS = {
     'exclude_url_names': [],
