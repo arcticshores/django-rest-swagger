@@ -80,8 +80,9 @@ class SwaggerUIView(View):
                     json.dumps(getattr(settings, 'CSRF_COOKIE_NAME', 'csrftoken'))),
             }
         }
-        response = render_to_response(
-            template_name, {'request': request, **data})
+        ctx = {'request': request}
+        ctx.update(data)
+        response = render_to_response(template_name, ctx)
 
         return response
 
